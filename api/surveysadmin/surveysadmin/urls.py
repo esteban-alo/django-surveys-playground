@@ -15,10 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-
-from api.surveysadmin.localization.urls import countries_router
+from api.surveysadmin.localization.urls import localization_router
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/", include(countries_router.urls)),
+    path("api/", include(localization_router.urls)),
 ]
