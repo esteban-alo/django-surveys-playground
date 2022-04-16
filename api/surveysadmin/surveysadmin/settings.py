@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
+    "api.surveysadmin.form",
     "api.surveysadmin.localization",
 ]
 
@@ -74,8 +75,12 @@ WSGI_APPLICATION = "surveysadmin.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "surveys-playground",
+        "USER": "postgres",
+        "PASSWORD": "mysecretpassword",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
